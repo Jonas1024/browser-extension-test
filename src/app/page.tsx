@@ -68,9 +68,6 @@ export default function Home() {
     // 创建并触发 authEvent 事件，将 authUrl 作为事件的 detail
     const event = new CustomEvent("authEvent", { detail: vcUrl });
     document.dispatchEvent(event);
-
-    const click = new CustomEvent("testEvent", { detail: vcUrl });
-    document.dispatchEvent(click);
   };
 
   const triggerProofEvent = () => {
