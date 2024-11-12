@@ -1,0 +1,15 @@
+{
+  "id": "06801d2a-9d19-4d50-9fd1-bee9db467c15",
+  "thid": "06801d2a-9d19-4d50-9fd1-bee9db467c15",
+  "from": "did:polygonid:polygon:amoy:2qYP7ghetsi2LVRKSpZLDE7CdTNmwe12UnrKnkabUo",
+  "typ": "application/iden3comm-plain-json",
+  "type": "https://iden3-communication.io/authorization/1.0/request",
+  "body": {
+    "reason": "test flow",
+    "message": "",
+    "callbackUrl": "http://localhost:3000/proof",
+    "scope": [
+        "replace"
+    ]
+  }
+}
