@@ -105,6 +105,11 @@ export default function Home() {
       });
   };
 
+  const sendToPopup = () => {
+    const event = new CustomEvent("sendToPopup", { detail: "hello from web view" });
+    document.dispatchEvent(event);
+  }
+
   return (
     <>
       <Typography.Title level={3} style={styles.title}>
@@ -143,6 +148,14 @@ export default function Home() {
               onClick={triggerProofEvent}
             >
               Get Proof
+            </Button>
+
+            <Button
+              type="default"
+              style={styles.button}
+              onClick={sendToPopup}
+            >
+              sendToPopup
             </Button>
           </div>
         </Col>
