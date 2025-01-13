@@ -33,6 +33,14 @@ export default function Home() {
       interval = setInterval(fetchData, 5000); // 设置定时器，每 5 秒轮询一次
     }
 
+    // Web 页面代码
+    window.addEventListener('message', (event) => {
+      if (event.data.action === 'messageFromPopup') {
+        console.log('Received from extension:', event.data.data);
+        // 在 Web 页面中执行对应的响应逻辑
+      }
+    });
+
     // 清除定时器
     return () => clearInterval(interval);
   }, [polling]);
